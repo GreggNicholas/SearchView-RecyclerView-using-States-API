@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                 .getCountryResponse()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe()
+                .subscribe();
     }
 
 
