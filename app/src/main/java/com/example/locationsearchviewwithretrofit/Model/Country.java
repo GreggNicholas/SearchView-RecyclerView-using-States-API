@@ -1,60 +1,58 @@
 package com.example.locationsearchviewwithretrofit.Model;
 
-import java.util.List;
-
 public class Country {
-    private List<State> AL;
-    private List<State> AK;
-    private List<State> AZ;
-    private List<State> AR;
-    private List<State> CA;
-    private List<State> CO;
-    private List<State> CT;
-    private List<State> DE;
-    private List<State> FL;
-    private List<State> GA;
-    private List<State> HI;
-    private List<State> ID;
-    private List<State> IL;
-    private List<State> IN;
-    private List<State> IA;
-    private List<State> KS;
-    private List<State> KY;
-    private List<State> LA;
-    private List<State> ME;
-    private List<State> MD;
-    private List<State> MA;
-    private List<State> MI;
-    private List<State> MN;
-    private List<State> MS;
-    private List<State> MO;
-    private List<State> MT;
-    private List<State> NE;
-    private List<State> NV;
-    private List<State> NH;
-    private List<State> NJ;
-    private List<State> NM;
-    private List<State> NY;
-    private List<State> NC;
-    private List<State> ND;
-    private List<State> OH;
-    private List<State> OK;
-    private List<State> OR;
-    private List<State> PA;
-    private List<State> RI;
-    private List<State> SC;
-    private List<State> SD;
-    private List<State> TN;
-    private List<State> TX;
-    private List<State> UT;
-    private List<State> VT;
-    private List<State> VA;
-    private List<State> WA;
-    private List<State> WV;
-    private List<State> WI;
-    private List<State> WY;
+    public final State AL;
+    public final State AK;
+    public final State AZ;
+    public final State AR;
+    public final State CA;
+    public final State CO;
+    public final State CT;
+    public final State DE;
+    public final State FL;
+    public final State GA;
+    public final State HI;
+    public final State ID;
+    public final State IL;
+    public final State IN;
+    public final State IA;
+    public final State KS;
+    public final State KY;
+    public final State LA;
+    public final State ME;
+    public final State MD;
+    public final State MA;
+    public final State MI;
+    public final State MN;
+    public final State MS;
+    public final State MO;
+    public final State MT;
+    public final State NE;
+    public final State NV;
+    public final State NH;
+    public final State NJ;
+    public final State NM;
+    public final State NY;
+    public final State NC;
+    public final State ND;
+    public final State OH;
+    public final State OK;
+    public final State OR;
+    public final State PA;
+    public final State RI;
+    public final State SC;
+    public final State SD;
+    public final State TN;
+    public final State TX;
+    public final State UT;
+    public final State VT;
+    public final State VA;
+    public final State WA;
+    public final State WV;
+    public final State WI;
+    public final State WY;
 
-    public Country(List<State> AL, List<State> AK, List<State> AZ, List<State> AR, List<State> CA, List<State> CO, List<State> CT, List<State> DE, List<State> FL, List<State> GA, List<State> HI, List<State> ID, List<State> IL, List<State> IN, List<State> IA, List<State> KS, List<State> KY, List<State> LA, List<State> ME, List<State> MD, List<State> MA, List<State> MI, List<State> MN, List<State> MS, List<State> MO, List<State> MT, List<State> NE, List<State> NV, List<State> NH, List<State> NJ, List<State> NM, List<State> NY, List<State> NC, List<State> ND, List<State> OH, List<State> OK, List<State> OR, List<State> PA, List<State> RI, List<State> SC, List<State> SD, List<State> TN, List<State> TX, List<State> UT, List<State> VT, List<State> VA, List<State> WA, List<State> WV, List<State> WI, List<State> WY) {
+    public Country(State AL, State AK, State AZ, State AR, State CA, State CO, State CT, State DE, State FL, State GA, State HI, State ID, State IL, State IN, State IA, State KS, State KY, State LA, State ME, State MD, State MA, State MI, State MN, State MS, State MO, State MT, State NE, State NV, State NH, State NJ, State NM, State NY, State NC, State ND, State OH, State OK, State OR, State PA, State RI, State SC, State SD, State TN, State TX, State UT, State VT, State VA, State WA, State WV, State WI, State WY) {
         this.AL = AL;
         this.AK = AK;
         this.AZ = AZ;
@@ -107,203 +105,203 @@ public class Country {
         this.WY = WY;
     }
 
-    public List<State> getAL() {
+    public State getAL() {
         return AL;
     }
 
-    public List<State> getAK() {
+    public State getAK() {
         return AK;
     }
 
-    public List<State> getAZ() {
+    public State getAZ() {
         return AZ;
     }
 
-    public List<State> getAR() {
+    public State getAR() {
         return AR;
     }
 
-    public List<State> getCA() {
+    public State getCA() {
         return CA;
     }
 
-    public List<State> getCO() {
+    public State getCO() {
         return CO;
     }
 
-    public List<State> getCT() {
+    public State getCT() {
         return CT;
     }
 
-    public List<State> getDE() {
+    public State getDE() {
         return DE;
     }
 
-    public List<State> getFL() {
+    public State getFL() {
         return FL;
     }
 
-    public List<State> getGA() {
+    public State getGA() {
         return GA;
     }
 
-    public List<State> getHI() {
+    public State getHI() {
         return HI;
     }
 
-    public List<State> getID() {
+    public State getID() {
         return ID;
     }
 
-    public List<State> getIL() {
+    public State getIL() {
         return IL;
     }
 
-    public List<State> getIN() {
+    public State getIN() {
         return IN;
     }
 
-    public List<State> getIA() {
+    public State getIA() {
         return IA;
     }
 
-    public List<State> getKS() {
+    public State getKS() {
         return KS;
     }
 
-    public List<State> getKY() {
+    public State getKY() {
         return KY;
     }
 
-    public List<State> getLA() {
+    public State getLA() {
         return LA;
     }
 
-    public List<State> getME() {
+    public State getME() {
         return ME;
     }
 
-    public List<State> getMD() {
+    public State getMD() {
         return MD;
     }
 
-    public List<State> getMA() {
+    public State getMA() {
         return MA;
     }
 
-    public List<State> getMI() {
+    public State getMI() {
         return MI;
     }
 
-    public List<State> getMN() {
+    public State getMN() {
         return MN;
     }
 
-    public List<State> getMS() {
+    public State getMS() {
         return MS;
     }
 
-    public List<State> getMO() {
+    public State getMO() {
         return MO;
     }
 
-    public List<State> getMT() {
+    public State getMT() {
         return MT;
     }
 
-    public List<State> getNE() {
+    public State getNE() {
         return NE;
     }
 
-    public List<State> getNV() {
+    public State getNV() {
         return NV;
     }
 
-    public List<State> getNH() {
+    public State getNH() {
         return NH;
     }
 
-    public List<State> getNJ() {
+    public State getNJ() {
         return NJ;
     }
 
-    public List<State> getNM() {
+    public State getNM() {
         return NM;
     }
 
-    public List<State> getNY() {
+    public State getNY() {
         return NY;
     }
 
-    public List<State> getNC() {
+    public State getNC() {
         return NC;
     }
 
-    public List<State> getND() {
+    public State getND() {
         return ND;
     }
 
-    public List<State> getOH() {
+    public State getOH() {
         return OH;
     }
 
-    public List<State> getOK() {
+    public State getOK() {
         return OK;
     }
 
-    public List<State> getOR() {
+    public State getOR() {
         return OR;
     }
 
-    public List<State> getPA() {
+    public State getPA() {
         return PA;
     }
 
-    public List<State> getRI() {
+    public State getRI() {
         return RI;
     }
 
-    public List<State> getSC() {
+    public State getSC() {
         return SC;
     }
 
-    public List<State> getSD() {
+    public State getSD() {
         return SD;
     }
 
-    public List<State> getTN() {
+    public State getTN() {
         return TN;
     }
 
-    public List<State> getTX() {
+    public State getTX() {
         return TX;
     }
 
-    public List<State> getUT() {
+    public State getUT() {
         return UT;
     }
 
-    public List<State> getVT() {
+    public State getVT() {
         return VT;
     }
 
-    public List<State> getVA() {
+    public State getVA() {
         return VA;
     }
 
-    public List<State> getWA() {
+    public State getWA() {
         return WA;
     }
 
-    public List<State> getWV() {
+    public State getWV() {
         return WV;
     }
 
-    public List<State> getWI() {
+    public State getWI() {
         return WI;
     }
 
-    public List<State> getWY() {
+    public State getWY() {
         return WY;
     }
 }
