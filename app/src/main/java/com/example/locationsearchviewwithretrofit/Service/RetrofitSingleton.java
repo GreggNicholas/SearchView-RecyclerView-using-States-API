@@ -9,7 +9,8 @@ public class RetrofitSingleton {
     private static final String BASE_URL = "https://gist.githubusercontent.com/";
     private static Retrofit instance;
 
-    private RetrofitSingleton() {
+    private RetrofitSingleton(Retrofit instance) {
+        this.instance = instance;
     }
 
     public static Retrofit getInstance() {
