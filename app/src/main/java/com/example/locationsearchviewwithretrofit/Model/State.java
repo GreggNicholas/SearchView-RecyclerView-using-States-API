@@ -21,15 +21,15 @@ public class State {
         return name;
     }
 
-    public String getCapital() {
+    public String getStateCapital() {
         return capital;
     }
 
-    public String getLat() {
+    public String getStateLat() {
         return lat;
     }
 
-    public String getLongitude() {
+    public String getStateLongitude() {
         return longitude;
     }
 }
