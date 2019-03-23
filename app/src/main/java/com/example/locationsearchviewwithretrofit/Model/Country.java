@@ -1,5 +1,8 @@
 package com.example.locationsearchviewwithretrofit.Model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Country {
     public final State AL;
     public final State AK;
@@ -104,4 +107,61 @@ public class Country {
         this.WI = WI;
         this.WY = WY;
     }
-}
+
+
+    public List<State> getStateList() {
+        List<State> stateList = new ArrayList<>();
+
+        stateList.add(AL);
+        stateList.add(AK);
+        stateList.add(AZ);
+        stateList.add(AR);
+        stateList.add(CA);
+        stateList.add(CO);
+        stateList.add(CT);
+        stateList.add(DE);
+        stateList.add(FL);
+        stateList.add(GA);
+        stateList.add(HI);
+        stateList.add(ID);
+        stateList.add(IL);
+        stateList.add(IN);
+        stateList.add(IA);
+        stateList.add(KS);
+        stateList.add(KY);
+        stateList.add(LA);
+        stateList.add(ME);
+        stateList.add(MD);
+        stateList.add(MA);
+        stateList.add(MI);
+        stateList.add(MN);
+        stateList.add(MS);
+        stateList.add(MO);
+        stateList.add(MT);
+        stateList.add(NE);
+        stateList.add(NV);
+        stateList.add(NH);
+        stateList.add(NJ);
+        stateList.add(NM);
+        stateList.add(NY);
+        stateList.add(NC);
+        stateList.add(ND);
+        stateList.add(OH);
+        stateList.add(OK);
+        stateList.add(OR);
+        stateList.add(PA);
+        stateList.add(RI);
+        stateList.add(SC);
+        stateList.add(SD);
+        stateList.add(TN);
+        stateList.add(TX);
+        stateList.add(UT);
+        stateList.add(VT);
+        stateList.add(VA);
+        stateList.add(WA);
+        stateList.add(WV);
+        stateList.add(WI);
+        stateList.add(WY);
+
+        return stateList;
+    }
