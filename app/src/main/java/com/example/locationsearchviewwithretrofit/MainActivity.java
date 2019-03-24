@@ -8,8 +8,8 @@ import android.support.v7.widget.SearchView;
 import android.util.Log;
 
 import com.example.locationsearchviewwithretrofit.Controller.UnitedStatesAdapter;
-import com.example.locationsearchviewwithretrofit.Model.UnitedStates;
 import com.example.locationsearchviewwithretrofit.Model.OneState;
+import com.example.locationsearchviewwithretrofit.Model.UnitedStates;
 import com.example.locationsearchviewwithretrofit.Service.PatriotService;
 import com.example.locationsearchviewwithretrofit.Service.RetrofitSingleton;
 
