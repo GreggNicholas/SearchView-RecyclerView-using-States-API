@@ -15,6 +15,7 @@ public class CountryViewHolder extends RecyclerView.ViewHolder {
 
     public CountryViewHolder(@NonNull View itemView) {
         super(itemView);
+        assert stateNameView != null;
         stateNameView = stateNameView.findViewById(R.id.itemview_statename);
         stateCapitalView = itemView.findViewById(R.id.itemview_statecapital);
     }

@@ -5,9 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
+import android.util.Log;
 
 import com.example.locationsearchviewwithretrofit.Controller.CountryAdapter;
-import com.example.locationsearchviewwithretrofit.Model.Country;
+import com.example.locationsearchviewwithretrofit.Model.UnitedStates;
 import com.example.locationsearchviewwithretrofit.Model.State;
 import com.example.locationsearchviewwithretrofit.Service.PatriotService;
 import com.example.locationsearchviewwithretrofit.Service.RetrofitSingleton;
@@ -15,18 +16,19 @@ import com.example.locationsearchviewwithretrofit.Service.RetrofitSingleton;
 import java.util.LinkedList;
 import java.util.List;
 
-import io.reactivex.SingleObserver;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
-    private final CompositeDisposable disposable = new CompositeDisposable();
+    private static final String TAG = "Main Activity";
+
     private SearchView searchView;
     private RecyclerView recyclerView;
     private CountryAdapter countryAdapter;
+    private Retrofit retrofit;
+    private List<State> stateList = new LinkedList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,34 +36,25 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         setContentView(R.layout.activity_main);
         searchView = findViewById(R.id.main_searchview);
         recyclerView = findViewById(R.id.main_recyclerview);
-//        disposable.add(
-//                Retrofit retrofit = RetrofitSingleton.getInstance();
-//        retrofit.create(PatriotService.class)
-//                .getCountryResponse()
-//                .subscribeOn(Schedulers.io())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe(new SingleObserver<Country>() {
-//                    @Override
-//                    public void onSubscribe(Disposable d) {
-//
-//                    }
-//
-//                    @Override
-//                    public void onSuccess(Country country) {
-//
-//                    }
-//
-//                    @Override
-//                    public void onError(Throwable e) {
-//                    }
-//                });
-
-
-        countryAdapter = new CountryAdapter();
-        recyclerView.setAdapter(countryAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-    }
+        retrofit = RetrofitSingleton.getInstance()
+                .create(PatriotService.class)
+                .getStates()
+                .enqueue(new Callback<UnitedStates>() {
+                    @Override
+                    public void onResponse(Call<UnitedStates> call, Response<UnitedStates> response) {
+                        Log.d(TAG, "onResponse: " + response.body().getStateList().get(0).getStateCapital());
+                        stateList.addAll(response.body().getStateList());
+                        countryAdapter = new CountryAdapter(stateList);
+                        recyclerView.setAdapter(countryAdapter);
+                    }
 
+                    @Override
+                    public void onFailure(Call<UnitedStates> call, Throwable t) {
+                        Log.e(TAG, "onFailure: " + t.getMessage());
+                    }
+                });
+    }
 
     @Override
     public boolean onQueryTextSubmit(String s) {
@@ -78,11 +71,5 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         }
         countryAdapter.setData(stateListQuery);
         return false;
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        disposable.clear();
     }
 }

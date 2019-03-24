@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.locationsearchviewwithretrofit.Model.Country;
 import com.example.locationsearchviewwithretrofit.Model.State;
 import com.example.locationsearchviewwithretrofit.R;
 import com.example.locationsearchviewwithretrofit.View.CountryViewHolder;
@@ -15,7 +14,6 @@ import java.util.List;
 
 public class CountryAdapter extends RecyclerView.Adapter<CountryViewHolder> {
     private List<State> getListOfState;
-
 
     @NonNull
     @Override
@@ -29,7 +27,6 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryViewHolder> {
     public void onBindViewHolder(@NonNull CountryViewHolder countryViewHolder, int position) {
         countryViewHolder.onBind(getListOfState.get(position));
     }
-
 
     @Override
     public int getItemCount() {
