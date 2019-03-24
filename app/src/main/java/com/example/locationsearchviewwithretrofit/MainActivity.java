@@ -9,7 +9,7 @@ import android.util.Log;
 
 import com.example.locationsearchviewwithretrofit.Controller.UnitedStatesAdapter;
 import com.example.locationsearchviewwithretrofit.Model.UnitedStates;
-import com.example.locationsearchviewwithretrofit.Model.State;
+import com.example.locationsearchviewwithretrofit.Model.OneState;
 import com.example.locationsearchviewwithretrofit.Service.PatriotService;
 import com.example.locationsearchviewwithretrofit.Service.RetrofitSingleton;
 
@@ -24,25 +24,28 @@ import retrofit2.Retrofit;
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
     private static final String TAG = "Main Activity";
 
-    private SearchView searchView;
     private RecyclerView recyclerView;
     private UnitedStatesAdapter unitedStatesAdapter;
-    private Retrofit retrofit;
-    private List<State> stateList = new LinkedList<>();
+    private List<OneState> stateList = new LinkedList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        searchView = findViewById(R.id.main_searchview);
+        SearchView searchView = findViewById(R.id.main_searchview);
+        searchView.setOnQueryTextListener(this);
+
         recyclerView = findViewById(R.id.main_recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        retrofit = RetrofitSingleton.getInstance()
-                .create(PatriotService.class)
+
+
+        Retrofit retrofit = RetrofitSingleton.getInstance();
+        retrofit.create(PatriotService.class)
                 .getStates()
                 .enqueue(new Callback<UnitedStates>() {
                     @Override
                     public void onResponse(Call<UnitedStates> call, Response<UnitedStates> response) {
+                        assert response.body() != null;
                         Log.d(TAG, "onResponse: " + response.body().getStateList().get(0).getStateCapital());
                         stateList.addAll(response.body().getStateList());
                         unitedStatesAdapter = new UnitedStatesAdapter(stateList);
@@ -63,8 +66,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     @Override
     public boolean onQueryTextChange(String s) {
-        List<State> stateListQuery = new LinkedList<>();
-        for (State state : stateListQuery) {
+        List<OneState> stateListQuery = new LinkedList<>();
+        for (OneState state : stateListQuery) {
             if (state.getStateCapital().toLowerCase().startsWith(s.toLowerCase())) {
                 stateListQuery.add(state);
             }

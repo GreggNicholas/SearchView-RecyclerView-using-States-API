@@ -1,24 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cardview_state"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    app:cardCornerRadius="8dp">
+    android:layout_height="wrap_content"
+    android:id="@+id/cardview_state"
+    android:orientation="vertical">
+    <android.support.v7.widget.CardView
 
-    <TextView
-        android:id="@+id/itemview_statename"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@id/itemview_statecapital" />
-
-    <TextView
-        android:id="@+id/itemview_statecapital"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:cardCornerRadius="8dp"
         app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent">
 
-</android.support.v7.widget.CardView>
+        <TextView
+            android:layout_marginTop="22dp"
+            android:id="@+id/itemview_statename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/averagetextsize" />
+
+        <TextView
+            android:layout_marginTop="22dp"
+            android:layout_marginLeft="222dp"
+            android:textColor="@color/colorAccent"
+            android:id="@+id/itemview_statecapital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp" />
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -6,14 +6,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.locationsearchviewwithretrofit.Model.State;
+import com.example.locationsearchviewwithretrofit.Model.OneState;
 import com.example.locationsearchviewwithretrofit.R;
 import com.example.locationsearchviewwithretrofit.View.UnitedStatesViewHolder;
 
 import java.util.List;
 
 public class UnitedStatesAdapter extends RecyclerView.Adapter<UnitedStatesViewHolder> {
-    private List<State> getListOfState;
+    private List<OneState> getListOfState;
+
+    public UnitedStatesAdapter(List<OneState> getListOfState) {
+        this.getListOfState = getListOfState;
+    }
 
     @NonNull
     @Override
@@ -33,7 +37,7 @@ public class UnitedStatesAdapter extends RecyclerView.Adapter<UnitedStatesViewHo
         return getListOfState.size();
     }
 
-    public void setData(List<State> stateListQuery) {
+    public void setData(List<OneState> stateListQuery) {
         getListOfState = stateListQuery;
         notifyDataSetChanged();
     }

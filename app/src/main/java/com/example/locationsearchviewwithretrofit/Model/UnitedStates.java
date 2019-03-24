@@ -4,58 +4,58 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UnitedStates {
-    private final State AL;
-    private final State AK;
-    private final State AZ;
-    private final State AR;
-    private final State CA;
-    private final State CO;
-    private final State CT;
-    private final State DE;
-    private final State FL;
-    private final State GA;
-    private final State HI;
-    private final State ID;
-    private final State IL;
-    private final State IN;
-    private final State IA;
-    private final State KS;
-    private final State KY;
-    private final State LA;
-    private final State ME;
-    private final State MD;
-    private final State MA;
-    private final State MI;
-    private final State MN;
-    private final State MS;
-    private final State MO;
-    private final State MT;
-    private final State NE;
-    private final State NV;
-    private final State NH;
-    private final State NJ;
-    private final State NM;
-    private final State NY;
-    private final State NC;
-    private final State ND;
-    private final State OH;
-    private final State OK;
-    private final State OR;
-    private final State PA;
-    private final State RI;
-    private final State SC;
-    private final State SD;
-    private final State TN;
-    private final State TX;
-    private final State UT;
-    private final State VT;
-    private final State VA;
-    private final State WA;
-    private final State WV;
-    private final State WI;
-    private final State WY;
+    private final OneState AL;
+    private final OneState AK;
+    private final OneState AZ;
+    private final OneState AR;
+    private final OneState CA;
+    private final OneState CO;
+    private final OneState CT;
+    private final OneState DE;
+    private final OneState FL;
+    private final OneState GA;
+    private final OneState HI;
+    private final OneState ID;
+    private final OneState IL;
+    private final OneState IN;
+    private final OneState IA;
+    private final OneState KS;
+    private final OneState KY;
+    private final OneState LA;
+    private final OneState ME;
+    private final OneState MD;
+    private final OneState MA;
+    private final OneState MI;
+    private final OneState MN;
+    private final OneState MS;
+    private final OneState MO;
+    private final OneState MT;
+    private final OneState NE;
+    private final OneState NV;
+    private final OneState NH;
+    private final OneState NJ;
+    private final OneState NM;
+    private final OneState NY;
+    private final OneState NC;
+    private final OneState ND;
+    private final OneState OH;
+    private final OneState OK;
+    private final OneState OR;
+    private final OneState PA;
+    private final OneState RI;
+    private final OneState SC;
+    private final OneState SD;
+    private final OneState TN;
+    private final OneState TX;
+    private final OneState UT;
+    private final OneState VT;
+    private final OneState VA;
+    private final OneState WA;
+    private final OneState WV;
+    private final OneState WI;
+    private final OneState WY;
 
-    public UnitedStates(State AL, State AK, State AZ, State AR, State CA, State CO, State CT, State DE, State FL, State GA, State HI, State ID, State IL, State IN, State IA, State KS, State KY, State LA, State ME, State MD, State MA, State MI, State MN, State MS, State MO, State MT, State NE, State NV, State NH, State NJ, State NM, State NY, State NC, State ND, State OH, State OK, State OR, State PA, State RI, State SC, State SD, State TN, State TX, State UT, State VT, State VA, State WA, State WV, State WI, State WY) {
+    public UnitedStates(OneState AL, OneState AK, OneState AZ, OneState AR, OneState CA, OneState CO, OneState CT, OneState DE, OneState FL, OneState GA, OneState HI, OneState ID, OneState IL, OneState IN, OneState IA, OneState KS, OneState KY, OneState LA, OneState ME, OneState MD, OneState MA, OneState MI, OneState MN, OneState MS, OneState MO, OneState MT, OneState NE, OneState NV, OneState NH, OneState NJ, OneState NM, OneState NY, OneState NC, OneState ND, OneState OH, OneState OK, OneState OR, OneState PA, OneState RI, OneState SC, OneState SD, OneState TN, OneState TX, OneState UT, OneState VT, OneState VA, OneState WA, OneState WV, OneState WI, OneState WY) {
         this.AL = AL;
         this.AK = AK;
         this.AZ = AZ;
@@ -109,8 +109,8 @@ public class UnitedStates {
     }
 
 
-    public List<State> getStateList() {
-        List<State> stateList = new ArrayList<>();
+    public List<OneState> getStateList() {
+        List<OneState> stateList = new ArrayList<>();
 
         stateList.add(AL);
         stateList.add(AK);
@@ -164,5 +164,205 @@ public class UnitedStates {
         stateList.add(WY);
 
         return stateList;
+    }
+
+    public OneState getAL() {
+        return AL;
+    }
+
+    public OneState getAK() {
+        return AK;
+    }
+
+    public OneState getAZ() {
+        return AZ;
+    }
+
+    public OneState getAR() {
+        return AR;
+    }
+
+    public OneState getCA() {
+        return CA;
+    }
+
+    public OneState getCO() {
+        return CO;
+    }
+
+    public OneState getCT() {
+        return CT;
+    }
+
+    public OneState getDE() {
+        return DE;
+    }
+
+    public OneState getFL() {
+        return FL;
+    }
+
+    public OneState getGA() {
+        return GA;
+    }
+
+    public OneState getHI() {
+        return HI;
+    }
+
+    public OneState getID() {
+        return ID;
+    }
+
+    public OneState getIL() {
+        return IL;
+    }
+
+    public OneState getIN() {
+        return IN;
+    }
+
+    public OneState getIA() {
+        return IA;
+    }
+
+    public OneState getKS() {
+        return KS;
+    }
+
+    public OneState getKY() {
+        return KY;
+    }
+
+    public OneState getLA() {
+        return LA;
+    }
+
+    public OneState getME() {
+        return ME;
+    }
+
+    public OneState getMD() {
+        return MD;
+    }
+
+    public OneState getMA() {
+        return MA;
+    }
+
+    public OneState getMI() {
+        return MI;
+    }
+
+    public OneState getMN() {
+        return MN;
+    }
+
+    public OneState getMS() {
+        return MS;
+    }
+
+    public OneState getMO() {
+        return MO;
+    }
+
+    public OneState getMT() {
+        return MT;
+    }
+
+    public OneState getNE() {
+        return NE;
+    }
+
+    public OneState getNV() {
+        return NV;
+    }
+
+    public OneState getNH() {
+        return NH;
+    }
+
+    public OneState getNJ() {
+        return NJ;
+    }
+
+    public OneState getNM() {
+        return NM;
+    }
+
+    public OneState getNY() {
+        return NY;
+    }
+
+    public OneState getNC() {
+        return NC;
+    }
+
+    public OneState getND() {
+        return ND;
+    }
+
+    public OneState getOH() {
+        return OH;
+    }
+
+    public OneState getOK() {
+        return OK;
+    }
+
+    public OneState getOR() {
+        return OR;
+    }
+
+    public OneState getPA() {
+        return PA;
+    }
+
+    public OneState getRI() {
+        return RI;
+    }
+
+    public OneState getSC() {
+        return SC;
+    }
+
+    public OneState getSD() {
+        return SD;
+    }
+
+    public OneState getTN() {
+        return TN;
+    }
+
+    public OneState getTX() {
+        return TX;
+    }
+
+    public OneState getUT() {
+        return UT;
+    }
+
+    public OneState getVT() {
+        return VT;
+    }
+
+    public OneState getVA() {
+        return VA;
+    }
+
+    public OneState getWA() {
+        return WA;
+    }
+
+    public OneState getWV() {
+        return WV;
+    }
+
+    public OneState getWI() {
+        return WI;
+    }
+
+    public OneState getWY() {
+        return WY;
     }
 }
