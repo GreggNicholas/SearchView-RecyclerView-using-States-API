@@ -8,24 +8,24 @@ import android.view.ViewGroup;
 
 import com.example.locationsearchviewwithretrofit.Model.State;
 import com.example.locationsearchviewwithretrofit.R;
-import com.example.locationsearchviewwithretrofit.View.CountryViewHolder;
+import com.example.locationsearchviewwithretrofit.View.UnitedStatesViewHolder;
 
 import java.util.List;
 
-public class CountryAdapter extends RecyclerView.Adapter<CountryViewHolder> {
+public class UnitedStatesAdapter extends RecyclerView.Adapter<UnitedStatesViewHolder> {
     private List<State> getListOfState;
 
     @NonNull
     @Override
-    public CountryViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int position) {
+    public UnitedStatesViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int position) {
         View view = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.state_itemview, viewGroup, false);
-        return new CountryViewHolder(view);
+        return new UnitedStatesViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CountryViewHolder countryViewHolder, int position) {
-        countryViewHolder.onBind(getListOfState.get(position));
+    public void onBindViewHolder(@NonNull UnitedStatesViewHolder unitedStatesViewHolder, int position) {
+        unitedStatesViewHolder.onBind(getListOfState.get(position));
     }
 
     @Override

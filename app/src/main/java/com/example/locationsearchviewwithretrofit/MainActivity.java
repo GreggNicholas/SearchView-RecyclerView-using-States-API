@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
 
-import com.example.locationsearchviewwithretrofit.Controller.CountryAdapter;
+import com.example.locationsearchviewwithretrofit.Controller.UnitedStatesAdapter;
 import com.example.locationsearchviewwithretrofit.Model.UnitedStates;
 import com.example.locationsearchviewwithretrofit.Model.State;
 import com.example.locationsearchviewwithretrofit.Service.PatriotService;
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     private SearchView searchView;
     private RecyclerView recyclerView;
-    private CountryAdapter countryAdapter;
+    private UnitedStatesAdapter unitedStatesAdapter;
     private Retrofit retrofit;
     private List<State> stateList = new LinkedList<>();
 
@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                     public void onResponse(Call<UnitedStates> call, Response<UnitedStates> response) {
                         Log.d(TAG, "onResponse: " + response.body().getStateList().get(0).getStateCapital());
                         stateList.addAll(response.body().getStateList());
-                        countryAdapter = new CountryAdapter(stateList);
-                        recyclerView.setAdapter(countryAdapter);
+                        unitedStatesAdapter = new UnitedStatesAdapter(stateList);
+                        recyclerView.setAdapter(unitedStatesAdapter);
                     }
 
                     @Override
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                 stateListQuery.add(state);
             }
         }
-        countryAdapter.setData(stateListQuery);
+        unitedStatesAdapter.setData(stateListQuery);
         return false;
     }
 }

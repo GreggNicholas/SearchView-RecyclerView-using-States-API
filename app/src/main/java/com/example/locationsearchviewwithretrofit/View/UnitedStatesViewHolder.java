@@ -9,11 +9,11 @@ import com.example.locationsearchviewwithretrofit.Model.State;
 import com.example.locationsearchviewwithretrofit.R;
 
 
-public class CountryViewHolder extends RecyclerView.ViewHolder {
+public class UnitedStatesViewHolder extends RecyclerView.ViewHolder {
     private TextView stateNameView;
     private TextView stateCapitalView;
 
-    public CountryViewHolder(@NonNull View itemView) {
+    public UnitedStatesViewHolder(@NonNull View itemView) {
         super(itemView);
         assert stateNameView != null;
         stateNameView = stateNameView.findViewById(R.id.itemview_statename);
